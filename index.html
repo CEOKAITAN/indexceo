@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CEO KAITAN — Premium Blox Fruit Marketplace</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Performance: preconnect to font + image origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc">
+<link rel="preconnect" href="https://img1.pic.in.th">
+<link rel="preconnect" href="https://img2.pic.in.th">
+
+<!-- Optimized fonts: only weights actually used (was 14 weights → now 4) -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#070608;
@@ -22,7 +31,7 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Kanit','Inter',sans-serif;
+  font-family:'Kanit',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   background:var(--bg);color:var(--text);
   overflow-x:hidden;min-height:100vh;position:relative;
 }
@@ -473,7 +482,7 @@ body::after{
       </div>
     </div>
     <div class="hero-mascot">
-      <img src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt="CEO KAITAN Mascot">
+      <img fetchpriority="high" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt="CEO KAITAN Mascot">
     </div>
   </div>
 </section>
@@ -488,22 +497,22 @@ body::after{
     </div>
     <div class="cat-bento reveal">
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="cat-tile">
-        <div class="cat-tile-img-wrap"><img src="https://img1.pic.in.th/images/wfwfwfwfwfwffdsgg.png" alt="ไก่ตันคัดพิเศษ"></div>
+        <div class="cat-tile-img-wrap"><img loading="lazy" decoding="async" src="https://img1.pic.in.th/images/wfwfwfwfwfwffdsgg.png" alt="ไก่ตันคัดพิเศษ"></div>
         <div class="cat-tile-sep"></div>
         <div class="cat-tile-info"><div class="cat-tile-text"><div class="cat-tile-name">ไก่ตันคัดพิเศษ</div><div class="cat-tile-desc">ROBLOX · Blox Fruit</div></div><div class="cat-tile-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
       </a>
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="cat-tile">
-        <div class="cat-tile-img-wrap"><img src="https://img2.pic.in.th/925eb85e400fb3cf01cf845f895389ae.png" alt="ROV Coupons"></div>
+        <div class="cat-tile-img-wrap"><img loading="lazy" decoding="async" src="https://img2.pic.in.th/925eb85e400fb3cf01cf845f895389ae.png" alt="ROV Coupons"></div>
         <div class="cat-tile-sep"></div>
         <div class="cat-tile-info"><div class="cat-tile-text"><div class="cat-tile-name">ROV Coupons</div><div class="cat-tile-desc">เติมคูปอง · ราคาดี</div></div><div class="cat-tile-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
       </a>
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="cat-tile">
-        <div class="cat-tile-img-wrap"><img src="https://img2.pic.in.th/885fd739f5b19a2472cde0e167f52573.png" alt="MLBB Diamonds"></div>
+        <div class="cat-tile-img-wrap"><img loading="lazy" decoding="async" src="https://img2.pic.in.th/885fd739f5b19a2472cde0e167f52573.png" alt="MLBB Diamonds"></div>
         <div class="cat-tile-sep"></div>
         <div class="cat-tile-info"><div class="cat-tile-text"><div class="cat-tile-name">MLBB Diamonds</div><div class="cat-tile-desc">เติมเพชร · Mobile Legends</div></div><div class="cat-tile-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
       </a>
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="cat-tile">
-        <div class="cat-tile-img-wrap"><img src="https://img1.pic.in.th/images/ad091de3720f3f2ec075d1166ee8ea45.png" alt="Free Fire"></div>
+        <div class="cat-tile-img-wrap"><img loading="lazy" decoding="async" src="https://i.postimg.cc/4xDx4s7g/d-di-di.png" alt="Free Fire"></div>
         <div class="cat-tile-sep"></div>
         <div class="cat-tile-info"><div class="cat-tile-text"><div class="cat-tile-name">Free Fire</div><div class="cat-tile-desc">เติมเพชร · ส่งไว</div></div><div class="cat-tile-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div>
       </a>
@@ -527,7 +536,7 @@ body::after{
     </div>
     <div class="event-grid reveal">
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card">
-        <div class="event-mascot-mini"><img src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag">🎰 Roulette</div>
           <div class="event-name">ไก่ตัน 0 บาท ลง 19:00 น.</div>
@@ -536,7 +545,7 @@ body::after{
         <div class="event-timer"><div class="event-timer-lbl">เหลือเวลา</div><div class="event-timer-val" data-target="19:00">--:--:--</div></div>
       </a>
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card">
-        <div class="event-mascot-mini"><img src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag gold">✨ Special</div>
           <div class="event-name">ไก่ตัน 1 บาท ลง 20:00 น.</div>
@@ -570,11 +579,11 @@ body::after{
           <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="showcase-link">View all <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="showcase-track">
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/968376725e2f0d83ef4adf6e219c825a95405eb309751e7924afb42bf2531f77.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/d096f7f0b6a6a6a2ebcf820742537319119368b60dbacae3b8796ce3d36b51fb.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/202390644aa21f4d50beaa0ed7b221455b0621c23e0d8c04de53c82ae3a7ad71.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/49c37a61b6bd17c1f1a89d56fc2ae69a6540e9b1571f17a9f3eed758c090753c.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/0f6f3f0b7a20b2a8a1575c2ff5fc26ddd1949b5396e6307e4e63116afadf5b73.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/968376725e2f0d83ef4adf6e219c825a95405eb309751e7924afb42bf2531f77.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/d096f7f0b6a6a6a2ebcf820742537319119368b60dbacae3b8796ce3d36b51fb.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/202390644aa21f4d50beaa0ed7b221455b0621c23e0d8c04de53c82ae3a7ad71.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/49c37a61b6bd17c1f1a89d56fc2ae69a6540e9b1571f17a9f3eed758c090753c.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/0f6f3f0b7a20b2a8a1575c2ff5fc26ddd1949b5396e6307e4e63116afadf5b73.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
         </div>
       </div>
 
@@ -590,11 +599,11 @@ body::after{
           <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="showcase-link">View all <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="showcase-track">
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/260df373bd2e7404cbc1472f7f4d2e27e4d474fdc43eff63cbdc5aa4cacd764c318736fc82aac1bf.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/f8ae8697c4925c929ef9baac7a6c11e5faa86ec51af3c858a996966697bc8a51bba948fa234594ed.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/7ed4dbb04201acdc79b91527ffae39a3a189db7f85fd34787afe3d836ab8b846.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/ea8fd8433556f44d1f85086d4c0d4415ba4746b424a950ccfc3b6d7ca3d3e466.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/0de29acdd7d7c95c8f6f169c0ecd0d3d9b80395d78bf961ef7bad7a06a657c7d5a5b12d3b22f1ab4.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/260df373bd2e7404cbc1472f7f4d2e27e4d474fdc43eff63cbdc5aa4cacd764c318736fc82aac1bf.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/f8ae8697c4925c929ef9baac7a6c11e5faa86ec51af3c858a996966697bc8a51bba948fa234594ed.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/7ed4dbb04201acdc79b91527ffae39a3a189db7f85fd34787afe3d836ab8b846.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/ea8fd8433556f44d1f85086d4c0d4415ba4746b424a950ccfc3b6d7ca3d3e466.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/0de29acdd7d7c95c8f6f169c0ecd0d3d9b80395d78bf961ef7bad7a06a657c7d5a5b12d3b22f1ab4.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
         </div>
       </div>
 
@@ -610,11 +619,11 @@ body::after{
           <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="showcase-link">View all <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="showcase-track">
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/Valorant-vbvb-copygg6e42b3540944d3d9.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/MLBB--1f07ba1562f479642.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/Freefire--1adbc225f5b8cd8b4.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img1.pic.in.th/images/ROV--1f77d297eb416d299.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
-          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" src="https://img2.pic.in.th/e68e59b600c339bbc1a32924c279ab61cd4d7b43ffc924b93b8ecf1e3dccb953.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img1.pic.in.th/images/Valorant-vbvb-copygg6e42b3540944d3d9.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/MLBB--1f07ba1562f479642.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/Freefire--1adbc225f5b8cd8b4.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://i.postimg.cc/bNGGq6CH/ROV-te-mkem-1.png" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+          <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="product-card"><img class="product-card-img" loading="lazy" decoding="async" src="https://img2.pic.in.th/e68e59b600c339bbc1a32924c279ab61cd4d7b43ffc924b93b8ecf1e3dccb953.webp" alt=""><div class="product-card-glow"></div><div class="product-card-overlay"><span class="product-card-tag">BEST SELL</span><div class="product-card-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
         </div>
       </div>
 
