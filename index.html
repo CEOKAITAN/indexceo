@@ -48,7 +48,7 @@ body::after{
 }
 
 /* ── LOADER ── */
-#loader{position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;}
+#loader{position:fixed;inset:0;z-index:99999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .35s,visibility .35s;}
 #loader.done{opacity:0;visibility:hidden;}
 .loader-mark{font-family:'Bebas Neue','Kanit',sans-serif;font-size:64px;font-weight:700;letter-spacing:8px;color:#fff;position:relative;}
 .loader-mark::before{content:'';position:absolute;left:50%;bottom:-20px;transform:translateX(-50%);width:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold),var(--red));animation:loadBar 1.4s ease-in-out infinite;}
@@ -773,7 +773,16 @@ body::after{
 </button>
 
 <script>
-window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('done');setTimeout(()=>{const l=document.getElementById('loader');if(l&&l.parentNode)l.parentNode.removeChild(l);},900);},900);});
+/* LOADER — fade out immediately when page is ready */
+window.addEventListener('load',()=>{
+  const l=document.getElementById('loader');
+  if(!l)return;
+  // Tiny delay just for smooth fade transition
+  setTimeout(()=>{
+    l.classList.add('done');
+    setTimeout(()=>{if(l.parentNode)l.parentNode.removeChild(l);},400);
+  },150);
+});
 
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
