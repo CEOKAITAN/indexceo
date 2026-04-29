@@ -77,7 +77,12 @@ body::after{
 .hero-text{text-align:left;display:flex;flex-direction:column;align-items:flex-start;}
 @media(max-width:880px){.hero-text{align-items:center;text-align:center;}}
 .hero-mascot{position:relative;width:100%;display:flex;justify-content:center;align-items:center;pointer-events:auto;filter:drop-shadow(0 30px 60px rgba(255,42,42,0.35)) drop-shadow(0 0 80px rgba(255,184,0,0.2));animation:mascotFloat 5s ease-in-out infinite;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;}
-.hero-mascot.dragging{cursor:grabbing;animation:none;z-index:1000;}
+.hero-mascot.dragging,.hero-mascot.bouncing{
+  cursor:grabbing;
+  animation:none;
+  z-index:1000;
+  transform:translate3d(var(--drag-x,0),var(--drag-y,0),0) !important;
+}
 .hero-mascot.bouncing{transition:transform .6s cubic-bezier(.34,1.6,.64,1);}
 .hero-mascot picture{display:block;width:100%;max-width:600px;}
 .hero-mascot img{width:100%;height:auto;max-width:600px;max-height:820px;object-fit:contain;display:block;-webkit-user-drag:none;pointer-events:none;}
@@ -899,17 +904,19 @@ body::after{
     padding:0;
     position:relative;
     z-index:4;
+    pointer-events:none;
     align-items:flex-start;
     text-align:left;
   }
+  .hero-text a,.hero-text button,.hero-pill,.hero-stats{pointer-events:auto;}
   .hero-mascot{
     display:flex;
     position:absolute;
-    top:104px;
-    right:10px;
-    width:clamp(96px,27vw,118px);
+    top:48px;
+    right:8px;
+    width:clamp(112px,32vw,140px);
     opacity:1;
-    z-index:3;
+    z-index:5;
     pointer-events:auto;
     cursor:grab;
     touch-action:none;
@@ -929,7 +936,7 @@ body::after{
   }
   .hero-mascot.dragging picture,.hero-mascot.bouncing picture{animation:none;}
   .hero-pill{
-    max-width:calc(100% - 110px);
+    max-width:calc(100% - 122px);
     padding:6px 10px 6px 7px;
     margin-bottom:14px;
     gap:6px;
@@ -1126,12 +1133,12 @@ body::after{
 @media(max-width:380px){
   .hero{padding-left:12px;padding-right:12px;}
   .hero-mascot{
-    top:106px;
-    right:6px;
-    width:96px;
+    top:50px;
+    right:4px;
+    width:108px;
     opacity:1;
   }
-  .hero-pill{max-width:calc(100% - 94px);}
+  .hero-pill{max-width:calc(100% - 108px);}
   .hero-title{font-size:clamp(38px,13vw,48px);}
   .hero-ctas{grid-template-columns:1fr;}
   .hero-stat{min-height:0;padding:2px 1px;}
