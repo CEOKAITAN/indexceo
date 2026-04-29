@@ -891,13 +891,13 @@ body::after{
   .hero-mascot{
     display:flex;
     position:absolute;
-    top:82px;
-    right:-18px;
-    width:128px;
-    opacity:.24;
-    z-index:1;
+    top:102px;
+    right:4px;
+    width:clamp(122px,34vw,154px);
+    opacity:1;
+    z-index:2;
     pointer-events:none;
-    filter:drop-shadow(0 16px 30px rgba(255,42,42,0.24));
+    filter:drop-shadow(0 18px 34px rgba(255,42,42,0.32)) drop-shadow(0 0 20px rgba(255,184,0,0.14));
     animation:mascotFloatSide 5s ease-in-out infinite;
   }
   .hero-mascot picture,.hero-mascot img{
@@ -906,7 +906,7 @@ body::after{
     max-height:none;
   }
   .hero-pill{
-    max-width:calc(100% - 96px);
+    max-width:calc(100% - 128px);
     padding:6px 10px 6px 7px;
     margin-bottom:14px;
     gap:6px;
@@ -999,7 +999,7 @@ body::after{
   }
   .event-card{
     display:grid;
-    grid-template-columns:52px minmax(0,1fr) 96px 38px;
+    grid-template-columns:52px minmax(0,1fr) 108px;
     align-items:center;
     gap:8px;
     min-height:92px;
@@ -1062,20 +1062,7 @@ body::after{
     font-size:18px;
     letter-spacing:.8px;
   }
-  .event-card-go{
-    grid-column:4;
-    grid-row:1;
-    width:38px;
-    height:48px;
-    border-radius:12px;
-    background:linear-gradient(135deg,var(--red),#ff5a1f);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 10px 24px rgba(255,42,42,0.28);
-  }
-  .event-card-go svg{width:16px;height:16px;}
+  .event-card-go{display:none;}
 
   .big-cta{
     margin:30px 12px 32px;
@@ -1111,12 +1098,12 @@ body::after{
 @media(max-width:380px){
   .hero{padding-left:12px;padding-right:12px;}
   .hero-mascot{
-    top:78px;
-    right:-24px;
+    top:96px;
+    right:-2px;
     width:112px;
-    opacity:.2;
+    opacity:1;
   }
-  .hero-pill{max-width:calc(100% - 78px);}
+  .hero-pill{max-width:calc(100% - 104px);}
   .hero-title{font-size:clamp(38px,13vw,48px);}
   .hero-ctas{grid-template-columns:1fr;}
   .hero-stat{min-height:0;padding:2px 1px;}
@@ -1124,7 +1111,7 @@ body::after{
   .hero-stat-lbl{font-size:6.8px;}
 
   .event-card{
-    grid-template-columns:44px minmax(0,1fr) 78px 34px;
+    grid-template-columns:44px minmax(0,1fr) 88px;
     gap:7px;
     min-height:86px;
     padding:9px;
@@ -1136,7 +1123,7 @@ body::after{
   .event-timer{padding:7px 4px;}
   .event-timer-lbl{font-size:6.8px;letter-spacing:.6px;}
   .event-timer-val{font-size:15px;letter-spacing:.4px;}
-  .event-card-go{width:34px;height:44px;border-radius:11px;}
+  .event-card-go{display:none;}
 }
 </style>
 </head>
