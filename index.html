@@ -449,16 +449,20 @@ body::after{
 
 /* ── FOOTER ── */
 .footer{position:relative;z-index:2;padding:52px 24px 36px;border-top:1px solid var(--border);background:rgba(0,0,0,0.5);}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-@media(max-width:780px){.footer-inner{grid-template-columns:1fr 1fr;gap:28px;}}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr) minmax(210px,1fr);gap:34px;align-items:start;}
+@media(max-width:780px){.footer-inner{grid-template-columns:1fr 1fr;gap:18px;}.footer-main{grid-column:1/-1;}}
 .footer-brand{font-family:'Bebas Neue','Kanit',sans-serif;font-size:30px;letter-spacing:3px;color:#fff;margin-bottom:10px;}
 .footer-tag{font-size:13px;color:var(--text-dim);max-width:310px;line-height:1.6;}
 .footer-verify{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding:7px 11px;border-radius:999px;background:rgba(255,42,42,0.08);border:1px solid rgba(255,42,42,0.18);color:rgba(245,245,247,0.72);font-size:11px;line-height:1.35;}
 .footer-verify::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red-glow);flex-shrink:0;}
-.footer-h{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;font-weight:600;}
+.footer-h{font-size:11px;color:var(--text-faint);letter-spacing:1.5px;margin-bottom:14px;font-weight:700;}
 .footer-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.footer-list a{font-size:13px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
+.footer-list a,.footer-list span{font-size:13px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
 .footer-list a:hover{color:#fff;}
+.footer-social-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.footer-social-list a,.footer-social-list span{display:flex;align-items:center;justify-content:center;min-height:34px;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,0.045);border:1px solid var(--border);color:#fff;font-weight:600;}
+.footer-hours .footer-list{gap:9px;}
+.footer-online{color:#22c55e !important;font-weight:700;}
 .footer-bot{max-width:1200px;margin:40px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-faint);flex-wrap:wrap;gap:8px;}
 
 /* ── BACK TO TOP ── */
@@ -595,9 +599,17 @@ body::after{
   .testi-card{flex-basis:260px;padding:18px;border-radius:16px;}
   .big-cta{margin:44px 14px;padding:46px 18px;border-radius:20px;}
   .big-cta h2{font-size:clamp(38px,12vw,58px);}
-  .footer{padding:42px 18px 30px;}
-  .footer-inner{grid-template-columns:1fr;gap:24px;}
-  .footer-bot{align-items:flex-start;flex-direction:column;margin-top:30px;}
+  .footer{padding:38px 16px 30px;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:18px 12px;}
+  .footer-brand{font-size:28px;margin-bottom:8px;}
+  .footer-tag{max-width:none;font-size:12.5px;line-height:1.55;}
+  .footer-verify{width:100%;justify-content:flex-start;margin-top:12px;padding:8px 10px;border-radius:14px;font-size:10.5px;}
+  .footer-h{font-size:10px;letter-spacing:1.2px;margin-bottom:10px;}
+  .footer-list a,.footer-list span{font-size:12px;}
+  .footer-social-list{gap:7px;}
+  .footer-social-list a,.footer-social-list span{min-height:32px;padding:7px 8px;border-radius:10px;}
+  .footer-hours .footer-list{gap:8px;}
+  .footer-bot{align-items:flex-start;flex-direction:column;margin-top:24px;padding-top:16px;gap:6px;font-size:11px;}
   #backTop{right:14px;bottom:14px;width:42px;height:42px;}
 }
 
@@ -893,11 +905,11 @@ body::after{
   .hero-mascot{
     display:flex;
     position:absolute;
-    top:120px;
-    right:4px;
-    width:clamp(122px,34vw,154px);
+    top:104px;
+    right:10px;
+    width:clamp(96px,27vw,118px);
     opacity:1;
-    z-index:5;
+    z-index:3;
     pointer-events:auto;
     cursor:grab;
     touch-action:none;
@@ -917,7 +929,7 @@ body::after{
   }
   .hero-mascot.dragging picture,.hero-mascot.bouncing picture{animation:none;}
   .hero-pill{
-    max-width:calc(100% - 128px);
+    max-width:calc(100% - 110px);
     padding:6px 10px 6px 7px;
     margin-bottom:14px;
     gap:6px;
@@ -1114,12 +1126,12 @@ body::after{
 @media(max-width:380px){
   .hero{padding-left:12px;padding-right:12px;}
   .hero-mascot{
-    top:114px;
-    right:-2px;
-    width:112px;
+    top:106px;
+    right:6px;
+    width:96px;
     opacity:1;
   }
-  .hero-pill{max-width:calc(100% - 104px);}
+  .hero-pill{max-width:calc(100% - 94px);}
   .hero-title{font-size:clamp(38px,13vw,48px);}
   .hero-ctas{grid-template-columns:1fr;}
   .hero-stat{min-height:0;padding:2px 1px;}
@@ -1436,39 +1448,28 @@ body::after{
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <div>
+    <div class="footer-main">
       <div class="footer-brand">CEO KAITAN</div>
       <p class="footer-tag">ร้านไอดีไก่ตัน Roblox ราคาถูก ครบจบ ปลอดภัย — ร้านเกมพรีเมียม.</p>
       <div class="footer-verify">ร้านค้าที่ได้รับการยืนยัน • ไม่ใช่บริษัทในเครือ Roblox Corporation</div>
     </div>
-    <div>
-      <div class="footer-h">ร้านค้า</div>
-      <ul class="footer-list">
-        <li><a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer">สินค้าทั้งหมด</a></li>
-        <li><a href="#categories">บริการ</a></li>
-        <li><a href="#products">สินค้าแนะนำ</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-h">ช่องทางติดต่อ</div>
-      <ul class="footer-list">
-        <li><a href="https://www.messenger.com/channel/ceokaitan" target="_blank" rel="noopener noreferrer">Messenger</a></li>
+    <div class="footer-social">
+      <div class="footer-h">ติดตามได้ที่</div>
+      <ul class="footer-list footer-social-list">
         <li><a href="https://www.facebook.com/ceokaitan" target="_blank" rel="noopener noreferrer">Facebook</a></li>
         <li><a href="https://youtu.be/zD6OgT__Y8c" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        <li><span>Tiktok</span></li>
+        <li><span>Instagram</span></li>
       </ul>
     </div>
-    <div>
+    <div class="footer-hours">
       <div class="footer-h">เวลาเปิดบริการ</div>
       <ul class="footer-list">
         <li style="color:#fff;">ทุกวัน 08:30–23:00</li>
         <li>ตอบกลับ 5–15 นาที</li>
-        <li style="color:#22c55e;">● ออนไลน์อยู่</li>
+        <li class="footer-online">● ออนไลน์อยู่</li>
       </ul>
     </div>
-  </div>
-  <div class="footer-bot">
-    <div>© 2026 CEO KAITAN · All rights reserved</div>
-    <div>ออกแบบด้วยระบบพรีเมียม</div>
   </div>
 </footer>
 
@@ -1557,8 +1558,8 @@ new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!counted){coun
       m.style.removeProperty('--drag-y');
     },480);
   };
-  m.addEventListener('mousedown',dn);document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
-  m.addEventListener('touchstart',dn,{passive:true});document.addEventListener('touchmove',mv,{passive:false});document.addEventListener('touchend',up);
+  m.addEventListener('mousedown',dn);document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);document.addEventListener('mouseleave',up);
+  m.addEventListener('touchstart',dn,{passive:true});document.addEventListener('touchmove',mv,{passive:false});document.addEventListener('touchend',up);document.addEventListener('touchcancel',up);window.addEventListener('blur',up);
 })();
 
 if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
