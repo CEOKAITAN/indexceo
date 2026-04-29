@@ -912,7 +912,7 @@ body::after{
   .hero-mascot{
     display:flex;
     position:absolute;
-    top:48px;
+    top:34px;
     right:8px;
     width:clamp(112px,32vw,140px);
     opacity:1;
@@ -970,6 +970,8 @@ body::after{
     grid-template-columns:1fr 1fr;
     gap:8px;
     margin:0;
+    position:relative;
+    z-index:6;
   }
   .btn-primary,.btn-ghost{
     min-height:44px;
@@ -1133,7 +1135,7 @@ body::after{
 @media(max-width:380px){
   .hero{padding-left:12px;padding-right:12px;}
   .hero-mascot{
-    top:50px;
+    top:38px;
     right:4px;
     width:108px;
     opacity:1;
