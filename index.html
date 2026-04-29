@@ -902,13 +902,20 @@ body::after{
     cursor:grab;
     touch-action:none;
     filter:drop-shadow(0 18px 34px rgba(255,42,42,0.32)) drop-shadow(0 0 20px rgba(255,184,0,0.14));
-    animation:mascotFloatSide 5s ease-in-out infinite;
+    animation:none;
+    transform:translate3d(var(--drag-x,0),var(--drag-y,0),0);
+    will-change:transform;
   }
   .hero-mascot picture,.hero-mascot img{
     width:100%;
     max-width:none;
     max-height:none;
   }
+  .hero-mascot picture{
+    animation:mascotMobileFloat 5s ease-in-out infinite;
+    will-change:transform;
+  }
+  .hero-mascot.dragging picture,.hero-mascot.bouncing picture{animation:none;}
   .hero-pill{
     max-width:calc(100% - 128px);
     padding:6px 10px 6px 7px;
@@ -1097,6 +1104,11 @@ body::after{
     padding:10px 14px;
     font-size:13px;
   }
+}
+
+@keyframes mascotMobileFloat{
+  0%,100%{transform:translateY(0) rotate(0);}
+  50%{transform:translateY(-8px) rotate(-1deg);}
 }
 
 @media(max-width:380px){
@@ -1507,9 +1519,44 @@ new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!counted){coun
   const m=document.querySelector('.hero-mascot');if(!m)return;
   let drag=false,moved=false,sx=0,sy=0;const T=4;
   const pt=e=>e.touches?{x:e.touches[0].clientX,y:e.touches[0].clientY}:{x:e.clientX,y:e.clientY};
-  const dn=e=>{const p=pt(e);sx=p.x;sy=p.y;drag=true;moved=false;m.classList.remove('bouncing');};
-  const mv=e=>{if(!drag)return;const p=pt(e);const dx=p.x-sx,dy=p.y-sy;if(!moved&&Math.abs(dx)<T&&Math.abs(dy)<T)return;if(!moved){moved=true;m.classList.add('dragging');}if(e.cancelable)e.preventDefault();m.style.transform=`translate(${dx}px,${dy}px) rotate(${dx*.05}deg)`;};
-  const up=()=>{if(!drag)return;drag=false;if(!moved)return;m.classList.remove('dragging');m.classList.add('bouncing');m.style.transform='translate(0,0) rotate(0deg)';setTimeout(()=>{m.classList.remove('bouncing');m.style.transform='';},650);};
+  const setDrag=(x,y)=>{
+    m.style.setProperty('--drag-x',x+'px');
+    m.style.setProperty('--drag-y',y+'px');
+  };
+  const dn=e=>{
+    const p=pt(e);
+    sx=p.x;sy=p.y;
+    drag=true;moved=false;
+    m.classList.remove('bouncing');
+    m.style.transition='';
+  };
+  const mv=e=>{
+    if(!drag)return;
+    const p=pt(e);const dx=p.x-sx,dy=p.y-sy;
+    if(!moved&&Math.abs(dx)<T&&Math.abs(dy)<T)return;
+    if(!moved){
+      moved=true;
+      m.classList.add('dragging');
+      m.style.transition='none';
+    }
+    if(e.cancelable)e.preventDefault();
+    setDrag(dx,dy);
+  };
+  const up=()=>{
+    if(!drag)return;
+    drag=false;
+    if(!moved)return;
+    m.classList.remove('dragging');
+    m.classList.add('bouncing');
+    m.style.transition='transform .45s cubic-bezier(.34,1.6,.64,1)';
+    setDrag(0,0);
+    setTimeout(()=>{
+      m.classList.remove('bouncing');
+      m.style.transition='';
+      m.style.removeProperty('--drag-x');
+      m.style.removeProperty('--drag-y');
+    },480);
+  };
   m.addEventListener('mousedown',dn);document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);
   m.addEventListener('touchstart',dn,{passive:true});document.addEventListener('touchmove',mv,{passive:false});document.addEventListener('touchend',up);
 })();
