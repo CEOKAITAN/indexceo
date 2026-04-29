@@ -152,6 +152,7 @@ body::after{
   -webkit-text-fill-color:transparent;
   animation:lightSweepScroll 4s ease-in-out infinite;
 }
+.why-title-break{display:none;}
 
 @keyframes lightSweepScroll{
   0%  {background-position:150% 0;}
@@ -276,6 +277,7 @@ body::after{
 .event-tag{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,var(--red),var(--red-glow));color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:999px;margin-bottom:8px;text-transform:uppercase;box-shadow:0 4px 12px rgba(255,42,42,0.4);}
 .event-tag.gold{background:linear-gradient(135deg,var(--gold),#ff8c00);box-shadow:0 4px 12px rgba(255,184,0,0.4);}
 .event-name{font-size:18px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:4px;}
+.event-mobile-break{display:none;}
 .event-desc{font-size:13px;color:var(--text-faint);line-height:1.5;}
 .event-timer{flex-shrink:0;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:14px;padding:10px 22px;text-align:center;min-width:160px;}
 .event-timer-lbl{font-size:10px;color:rgba(34,197,94,0.75);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:4px;}
@@ -566,7 +568,8 @@ body::after{
   .event-info{order:initial;flex:auto;}
   .event-mascot-mini{order:initial;width:58px;height:58px;}
   .event-timer{grid-column:1 / -1;order:initial;width:100%;min-width:0;padding:9px 12px;}
-  .event-name{font-size:15px;}
+  .event-name{font-size:15px;line-height:1.35;}
+  .event-mobile-break{display:block;}
   .event-desc{font-size:12px;}
   .event-tag{font-size:10px;padding:4px 10px;}
   .showcase-row{margin-bottom:42px;}
@@ -647,6 +650,8 @@ body::after{
   .section{padding:48px 14px;}
   .section-head{margin-bottom:26px;}
   .section-title{line-height:1.05;}
+  #why .why-title-break{display:block;}
+  #why .section-title{line-height:.98;}
   .cat-bento{
     display:flex;
     grid-template-columns:none;
@@ -674,7 +679,7 @@ body::after{
   .cat-tile-desc{font-size:9.5px;}
   .cat-tile-arrow{width:25px;height:25px;}
   .event-head{margin-bottom:14px;}
-  .event-grid{gap:10px;}
+  .event-grid{grid-template-columns:1fr !important;gap:12px;}
   .event-card{border-radius:16px;}
   .event-timer{border-radius:12px;}
   .event-timer-val{font-size:24px;}
@@ -935,7 +940,7 @@ body::after{
         <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag">รูเล็ตต์</div>
-          <div class="event-name">ไก่ตัน 0 บาท ลง 19:00 น.</div>
+          <div class="event-name">ไก่ตัน 0 บาท <br class="event-mobile-break">ลง 19:00 น.</div>
           <div class="event-desc">กดเพื่อเข้าร่วมรูเล็ตต์ฟรี!</div>
         </div>
         <div class="event-timer"><div class="event-timer-lbl">เหลือเวลา</div><div class="event-timer-val" data-target="19:00">--:--:--</div></div>
@@ -944,7 +949,7 @@ body::after{
         <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag gold">พิเศษ</div>
-          <div class="event-name">ไก่ตัน 1 บาท ลง 20:00 น.</div>
+          <div class="event-name">ไก่ตัน 1 บาท <br class="event-mobile-break">ลง 20:00 น.</div>
           <div class="event-desc">กดเพื่อเข้าร่วมรูเล็ตต์พิเศษ!</div>
         </div>
         <div class="event-timer"><div class="event-timer-lbl">เหลือเวลา</div><div class="event-timer-val" data-target="20:00">--:--:--</div></div>
@@ -1032,7 +1037,7 @@ body::after{
   <div class="section-inner">
     <div class="section-head reveal">
       <div class="section-eyebrow">03 — จุดเด่น</div>
-      <h2 class="section-title">ทำไมต้อง ซีอีโอไก่ตัน?</h2>
+      <h2 class="section-title">ทำไมต้อง<br class="why-title-break">ซีอีโอไก่ตัน?</h2>
       <p class="section-sub">ทำไมลูกค้ากว่าแสนคนถึงเลือก CEO KAITAN</p>
     </div>
     <div class="features-bento reveal">
