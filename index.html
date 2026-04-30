@@ -265,7 +265,7 @@ body::after{
 .event-title-icon{width:44px;height:44px;border-radius:12px;flex-shrink:0;background:rgba(255,42,42,0.1);border:1px solid rgba(255,42,42,0.3);display:flex;align-items:center;justify-content:center;color:var(--red);box-shadow:0 0 24px rgba(255,42,42,0.15) inset;animation:eventBell 1.4s ease-in-out infinite;}
 .event-title-icon svg{width:22px;height:22px;}
 @keyframes eventBell{0%,100%{transform:rotate(0);}20%{transform:rotate(-12deg);}40%{transform:rotate(10deg);}60%{transform:rotate(-6deg);}80%{transform:rotate(4deg);}}
-.event-title{font-family:'Bebas Neue','Kanit',sans-serif;font-size:32px;letter-spacing:.2px;color:#fff;line-height:1;}
+.event-title{font-family:'Kanit',sans-serif;font-size:32px;letter-spacing:0;color:#fff;line-height:1;font-weight:900;text-shadow:0 2px 18px rgba(255,255,255,0.16);}
 .event-sub{font-size:12px;color:var(--text-faint);margin-top:6px;}
 .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 @media(max-width:780px){.event-grid{grid-template-columns:1fr;}}
@@ -312,7 +312,7 @@ body::after{
   box-shadow:0 0 24px rgba(255,42,42,0.3) inset,0 6px 16px rgba(255,42,42,0.25);
 }
 
-.showcase-row-title{font-family:'Bebas Neue','Kanit',sans-serif;font-size:32px;letter-spacing:.2px;color:#fff;line-height:1;}
+.showcase-row-title{font-family:'Kanit',sans-serif;font-size:32px;letter-spacing:0;color:#fff;line-height:1;font-weight:900;text-shadow:0 2px 18px rgba(255,255,255,0.16);}
 .showcase-row-sub{font-size:12px;color:var(--text-faint);margin-top:6px;}
 .showcase-link{font-size:13px;color:var(--text-dim);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;}
 .showcase-link:hover{color:#fff;}
@@ -463,9 +463,13 @@ body::after{
 .footer-h{font-size:11px;color:var(--text-faint);letter-spacing:1.5px;margin-bottom:14px;font-weight:700;}
 .footer-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
 .footer-list a,.footer-list span{font-size:13px;color:var(--text-dim);text-decoration:none;transition:color .2s;}
-.footer-list a:hover{color:#fff;}
+.footer-list a:hover{opacity:.82;}
 .footer-social-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
-.footer-social-list a,.footer-social-list span{display:flex;align-items:center;justify-content:center;min-height:34px;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,0.045);border:1px solid var(--border);color:#fff;font-weight:600;}
+.footer-social-list a,.footer-social-list span{display:inline-flex;align-items:center;justify-content:flex-start;min-height:0;padding:0;border-radius:0;background:transparent;border:0;font-weight:800;}
+.footer-social-list .social-facebook{color:#1877f2;}
+.footer-social-list .social-youtube{color:#ff2a2a;}
+.footer-social-list .social-tiktok{color:#fff;}
+.footer-social-list .social-instagram{color:#ff4fb8;}
 .footer-hours .footer-list{gap:9px;}
 .footer-online{color:#22c55e !important;font-weight:700;}
 .footer-bot{max-width:1200px;margin:40px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-faint);flex-wrap:wrap;gap:8px;}
@@ -586,8 +590,8 @@ body::after{
   .showcase-row-head{align-items:flex-start;margin-bottom:16px;}
   .showcase-row-left{gap:10px;}
   .showcase-link{font-size:12px;}
-  .showcase-track{gap:10px;margin-right:-14px;padding:4px 14px 12px 0;}
-  .product-card{flex-basis:152px;border-radius:14px;}
+  .showcase-track{gap:8px;margin-right:-14px;padding:4px 14px 12px 0;}
+  .product-card{flex-basis:calc((100vw - 52px) / 3);border-radius:12px;}
   .product-card-overlay{opacity:1;transform:none;padding:34px 10px 10px;}
   .product-card-tag{font-size:9px;padding:3px 8px;}
   .product-card-go{width:26px;height:26px;}
@@ -612,7 +616,7 @@ body::after{
   .footer-h{font-size:10px;letter-spacing:1.2px;margin-bottom:10px;}
   .footer-list a,.footer-list span{font-size:12px;}
   .footer-social-list{gap:7px;}
-  .footer-social-list a,.footer-social-list span{min-height:32px;padding:7px 8px;border-radius:10px;}
+  .footer-social-list a,.footer-social-list span{min-height:0;padding:0;border-radius:0;background:transparent;border:0;}
   .footer-hours .footer-list{gap:8px;}
   .footer-bot{align-items:flex-start;flex-direction:column;margin-top:24px;padding-top:16px;gap:6px;font-size:11px;}
   #backTop{right:14px;bottom:14px;width:42px;height:42px;}
@@ -624,7 +628,7 @@ body::after{
   .hero-stat{padding:11px 8px;border-radius:14px;}
   .hero-stat-val{font-size:24px;}
   .hero-stat-lbl{font-size:9px;}
-  .product-card{flex-basis:140px;}
+  .product-card{flex-basis:calc((100vw - 48px) / 3);}
   .nav-brand{font-size:14px;}
   .nav-cta{padding:7px 10px;font-size:10.5px;}
 }
@@ -716,7 +720,7 @@ body::after{
     overscroll-behavior-x:contain;
   }
   .product-card{
-    flex-basis:min(62vw,220px);
+    flex-basis:calc((100vw - 52px) / 3);
     scroll-snap-align:center;
   }
   .features-bento{
@@ -859,7 +863,7 @@ body::after{
   .cat-tile-desc{font-size:clamp(6px,1.8vw,7.5px);}
   .showcase-row-head{gap:8px;}
   .showcase-link{font-size:11px;}
-  .product-card{flex-basis:min(70vw,220px);}
+  .product-card{flex-basis:calc((100vw - 48px) / 3);}
   .feature-card{min-height:138px;padding:14px 11px;}
   .feature-top{gap:7px;}
   .feature-icon{width:34px;height:34px;border-radius:11px;}
@@ -884,7 +888,7 @@ body::after{
   .cat-tile-info{min-height:36px;padding:4px 3px 5px;}
   .cat-tile-name{font-size:7px;}
   .cat-tile-desc{font-size:5.8px;}
-  .product-card{flex-basis:82vw;}
+  .product-card{flex-basis:calc((100vw - 44px) / 3);}
   .features-bento{gap:6px;}
   .feature-card{min-height:134px;padding:13px 9px;}
   .feature-icon{width:32px;height:32px;}
@@ -1472,10 +1476,10 @@ body::after{
     <div class="footer-social">
       <div class="footer-h">ติดตามได้ที่</div>
       <ul class="footer-list footer-social-list">
-        <li><a href="https://www.facebook.com/ceokaitan" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        <li><a href="https://youtu.be/zD6OgT__Y8c" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        <li><span>Tiktok</span></li>
-        <li><span>Instagram</span></li>
+        <li><a href="https://www.facebook.com/ceokaitan" target="_blank" rel="noopener noreferrer" class="social-facebook">Facebook</a></li>
+        <li><a href="https://youtu.be/zD6OgT__Y8c" target="_blank" rel="noopener noreferrer" class="social-youtube">YouTube</a></li>
+        <li><span class="social-tiktok">Tiktok</span></li>
+        <li><span class="social-instagram">Instagram</span></li>
       </ul>
     </div>
     <div class="footer-hours">
