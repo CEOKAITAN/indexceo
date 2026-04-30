@@ -671,8 +671,12 @@ body::after{
   .hero-stat-val{font-size:clamp(18px,5.6vw,23px);white-space:nowrap;}
   .hero-stat-lbl{font-size:8.5px;color:rgba(245,245,247,0.58);line-height:1.2;max-width:100%;overflow-wrap:anywhere;}
   .section{padding:34px 14px;}
-  .section-head{margin-bottom:18px;}
-  .section-title{line-height:1.05;}
+  .section-head{margin-bottom:18px;text-align:left;}
+  .section-eyebrow{justify-content:flex-start;margin-left:0;margin-right:auto;text-align:left;}
+  .section-eyebrow::before{width:18px;}
+  .section-eyebrow::after{display:none;}
+  .section-title{line-height:1.05;text-align:left;margin-left:0;margin-right:auto;}
+  .section-sub{margin-left:0;margin-right:auto;text-align:left;max-width:100%;}
   #why .why-title-break{display:block;}
   #why .section-title{line-height:.98;}
   .cat-bento{
