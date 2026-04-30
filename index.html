@@ -288,7 +288,18 @@ body::after{
 .event-timer-lbl{font-size:10px;color:rgba(34,197,94,0.75);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:4px;}
 .event-timer-val{font-family:'Bebas Neue','Kanit',sans-serif;font-size:26px;letter-spacing:1.5px;color:#22c55e;line-height:1;font-weight:700;font-variant-numeric:tabular-nums;}
 .event-card-go{display:none;}
-.event-card.news-update .event-timer-val{font-family:'Kanit',sans-serif;font-size:18px;letter-spacing:0;}
+.news-code-head{
+  margin:26px 0 14px;
+}
+.news-code-head .event-title-row{
+  align-items:center;
+}
+.event-card.info-update{
+  grid-template-columns:70px minmax(0,1fr) 42px;
+}
+.event-card.info-update .event-card-go{
+  grid-column:3;
+}
 
 /* ── PRODUCT SHOWCASE ── */
 .showcase{margin-top:0;}
@@ -1328,6 +1339,12 @@ body::after{
     width:15px;
     height:15px;
   }
+  .news-code-head{
+    margin:20px 0 10px;
+  }
+  .event-card.info-update{
+    grid-template-columns:50px minmax(0,1fr) 36px;
+  }
 }
 @media(max-width:380px){
   .event-card{
@@ -1345,6 +1362,9 @@ body::after{
   .event-card-go{
     width:32px;
     height:32px;
+  }
+  .event-card.info-update{
+    grid-template-columns:42px minmax(0,1fr) 32px;
   }
 }
 </style>
@@ -1469,7 +1489,7 @@ body::after{
     </div>
     <div class="event-grid reveal">
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card">
-        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/4NwHM8QP/Untitled-1sr.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag">รูเล็ตต์</div>
           <div class="event-name">ไก่ตัน 0 บาท ลง 19:00 น.</div>
@@ -1479,7 +1499,7 @@ body::after{
         <div class="event-card-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </a>
       <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card">
-        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/HsT76GXG/hx-hk-x-hxh.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag gold">พิเศษ</div>
           <div class="event-name">ไก่ตัน 1 บาท ลง 22:00 น.</div>
@@ -1488,24 +1508,32 @@ body::after{
         <div class="event-timer"><div class="event-timer-lbl">เหลือเวลา</div><div class="event-timer-val" data-target="22:00">--:--:--</div></div>
         <div class="event-card-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </a>
-      <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card code-update">
-        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+    </div>
+    <div class="news-code-head reveal">
+      <div class="event-title-row">
+        <div class="event-title-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <div class="event-title">รวมข่าวสาร / โค้ดล่าสุด</div>
+      </div>
+    </div>
+    <div class="event-grid news-code-grid reveal">
+      <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card info-update code-update">
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/j5vJbLQX/Untitled-1.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag">CODE!</div>
           <div class="event-name">รวมโค้ดฟรี!! ROBLOX 2026</div>
           <div class="event-desc">กดเพื่อดูโค้ดเกมทั้งหมด</div>
         </div>
-        <div class="event-timer"><div class="event-timer-lbl">UPDATE</div><div class="event-timer-val">2026</div></div>
         <div class="event-card-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </a>
-      <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card news-update">
-        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/nVkZBRXr/234414af-5947-46cf-ad4d-83bee5c2553c.png" alt=""></div>
+      <a href="https://ckckshop.rdcw.xyz/categories" target="_blank" rel="noopener noreferrer" class="event-card info-update news-update">
+        <div class="event-mascot-mini"><img loading="lazy" decoding="async" src="https://i.postimg.cc/tTDVjYtm/Untitled-1.png" alt=""></div>
         <div class="event-info">
           <div class="event-tag gold">ข่าวสาร</div>
           <div class="event-name">ติดตามข่าวสารทั้งหมด</div>
           <div class="event-desc">กดเพื่อเลือกดูข่าวสารเกมต่างๆทั้งหมด</div>
         </div>
-        <div class="event-timer"><div class="event-timer-lbl">ข่าวเกม</div><div class="event-timer-val">ทั้งหมด</div></div>
         <div class="event-card-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </a>
     </div>
